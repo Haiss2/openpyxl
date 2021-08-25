@@ -3,8 +3,7 @@ import datetime as dt
 
 from openpyxl.styles import Border, Side, PatternFill, Font, GradientFill, Alignment
 from openpyxl import Workbook
-from openpyxl.chart import PieChart, ProjectedPieChart, Reference
-from openpyxl.chart.series import DataPoint
+
 
 class CoverPage():
 
