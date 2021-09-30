@@ -45,4 +45,17 @@ WordDescription(wb).render()
 SheetDescription(wb).render()
 
 
-wb.save("reboot_report.xlsx")
+
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+
+
+app = FastAPI()
+
+
+@app.get("/", response_class=FileResponse)
+async def main():
+    some_file_path = "reboot_report.xlsx"
+    wb.save("reboot_report.xlsx")
+    return some_file_path
+
